@@ -1,0 +1,16 @@
+.container{
+	max-width: 730px;
+}
+.jumbotron{
+	margin-top:30px;
+}
+.header{
+	border-bottom:1px solid #e5e5ee;
+}
+.title{
+	margin:0 10px;
+}
+.media-body h1{
+	color:#d81e06;
+	font-size: 30px;
+}

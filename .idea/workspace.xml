@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4247765b-6e5a-49b5-9a52-2576477c2e8b" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="drinking manage system" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="PhpServers">
+    <servers>
+      <server host="localhost" id="eb7f4532-26c6-41f9-85cd-5c5b301200cb" name="localhost" />
+    </servers>
+  </component>
+  <component name="ProjectId" id="1alVq4p5iQ6LOsSVDXzUu44zxlm" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\drinking manage system" />
+      <recent name="D:\xampp\htdocs\drinking manage system\css" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.login.php">
+    <configuration name="PDOconnection2.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost/drinking manage system/PDOconnection2.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="addDrinkRecord.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost/drinking manage system/addDrinkRecord.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="deleteStudent.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost/drinking manage system/deleteStudent.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost/drinking manage system/index.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="login.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost/drinking manage system/login.php">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.login.php" />
+        <item itemvalue="JavaScript Debug.index.php" />
+        <item itemvalue="JavaScript Debug.PDOconnection2.php" />
+        <item itemvalue="JavaScript Debug.deleteStudent.php" />
+        <item itemvalue="JavaScript Debug.addDrinkRecord.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4247765b-6e5a-49b5-9a52-2576477c2e8b" name="Default Changelist" comment="" />
+      <created>1587310354650</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587310354650</updated>
+      <workItem from="1587310357157" duration="2314000" />
+      <workItem from="1587363320302" duration="7072000" />
+      <workItem from="1587370480371" duration="3431000" />
+      <workItem from="1587391914310" duration="23074000" />
+      <workItem from="1587698686992" duration="62000" />
+      <workItem from="1587698809729" duration="79000" />
+      <workItem from="1587718227654" duration="7114000" />
+      <workItem from="1588087388998" duration="10284000" />
+      <workItem from="1588159259150" duration="26575000" />
+      <workItem from="1588484718226" duration="11710000" />
+      <workItem from="1588662531722" duration="2522000" />
+      <workItem from="1588839269433" duration="17118000" />
+      <workItem from="1588943630909" duration="9016000" />
+      <workItem from="1589249430299" duration="32397000" />
+      <workItem from="1589434514939" duration="15207000" />
+      <workItem from="1589531726898" duration="22288000" />
+      <workItem from="1589643571250" duration="1948000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="loginReminder.php">
+        <watch expression="$e-&gt;message" />
+        <watch expression="$e-&gt;message" />
+        <watch expression="$e-&gt;message" />
+      </configuration>
+      <configuration name="signinReminder.php">
+        <watch expression="$stmtB-&gt;queryString" />
+        <watch expression="$GLOBALS['IDE_EVAL_CACHE']['fd090867-0724-4849-8ab2-f3960f0eb673']" />
+        <watch expression="$GLOBALS['IDE_EVAL_CACHE']['8f17534e-af13-4a5d-b4bd-0833aab66e59']" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

@@ -1,0 +1,30 @@
+
+
+.form-signin {
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 100px;
+}
+
+.form-signin .form-control {
+	height: 50px;
+	font-size: 16px;
+	border-radius: 0;
+}
+
+.form-signin input[id="inventionCode"] {
+	margin-bottom: 10px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.form-signin input[id="inputEmail"] {
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+}
+
+.btn{
+	margin-bottom: 3px;
+}

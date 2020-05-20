@@ -1,0 +1,12 @@
+$(document).ready(function(){
+    $("#logout").click(function(){
+        $.get("logout.php",function(data,status){
+            if(data==true){
+                alert("注销账号成功！");
+                window.location.reload();
+            }else{
+                alert("注销账号失败！");
+            }
+        });
+    });
+});
