@@ -32,6 +32,9 @@ Header("refresh:5;url=login.php");
         <p>系统将在 <span id="time">5</span> 秒后跳转到<?php echo $page?>...</p>
         <a href="<?php echo $url?>"><button class="btn btn-success">立即跳转</button></a>
     </div>
+    <?php
+    include 'beianCode.php';
+    ?>
 </div>
 </body>
 </html>

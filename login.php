@@ -35,6 +35,9 @@
 			<a href="signin.php"><button class="btn btn-lg btn-default btn-block" type="button">注册</button></a>
 			
 		</form>
+        <?php
+        include 'beianCode.php';
+        ?>
 	</div>
 
 </body>

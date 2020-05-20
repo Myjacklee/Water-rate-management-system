@@ -52,6 +52,9 @@
     			<button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
                 <a href="login.php"><button class="btn btn-lg btn-default btn-block" type="button">登录</button></a>
     		</form>
+            <?php
+            include 'beianCode.php';
+            ?>
     	</div>
 	</body>
 </html>

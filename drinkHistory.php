@@ -219,6 +219,9 @@ if(isset($_SESSION["loginStatus"]["status"])&&$_SESSION["loginStatus"]["status"]
                 </div>
             </div>
         </div>
+        <?php
+        include 'beianCode.php';
+        ?>
     </div>
     </body>
     <?php
@@ -243,6 +246,9 @@ if(isset($_SESSION["loginStatus"]["status"])&&$_SESSION["loginStatus"]["status"]
             <p>系统将在 <span id="time">5</span> 秒后跳转到<?php echo $page?>...</p>
             <a href="<?php echo $url?>"><button class="btn btn-success">立即跳转</button></a>
         </div>
+        <?php
+        include 'beianCode.php';
+        ?>
     </div>
     </body>
 <?php
