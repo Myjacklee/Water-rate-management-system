@@ -15,9 +15,10 @@ session_start();
     <script src="./bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script src="./js/loginTime.js"></script>
     <script src="./js/logout.js"></script>
-    <script src="js/changeStudent.js">
-
-    </script>
+    <script src="js/changeStudent.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+    <script src="./js/font-normal.js"></script>
+    <script src="./js/printStudentList.js"></script>
 </head>
 <?php
 header("content-type:text/html;charset=utf-8");
@@ -34,6 +35,7 @@ if(isset($_SESSION["loginStatus"]["status"])&&$_SESSION["loginStatus"]["status"]
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
     $row=$stmt->fetch();
     $allStudentColumns=intval($row["count(student_id)"]);
+    $showColumns=$allStudentColumns;
     $allPageNum=ceil($allStudentColumns/$showColumns);
     if($page>$allPageNum){
         $page=$allPageNum;
@@ -103,7 +105,7 @@ if(isset($_SESSION["loginStatus"]["status"])&&$_SESSION["loginStatus"]["status"]
                             <div class="panel-heading">
                                 <h3 class="panel-title">年级</h3>
                             </div>
-                            <div class="panel-body">
+                            <div class="panel-body" id="grade">
                                 <?php echo $_SESSION["loginStatus"]["grade"]?>
                             </div>
                         </div>
@@ -113,7 +115,7 @@ if(isset($_SESSION["loginStatus"]["status"])&&$_SESSION["loginStatus"]["status"]
                             <div class="panel-heading">
                                 <h3 class="panel-title">班级</h3>
                             </div>
-                            <div class="panel-body">
+                            <div class="panel-body" id="class_name">
                                 <?php echo $_SESSION["loginStatus"]["class"]?>
                             </div>
                         </div>
@@ -123,7 +125,7 @@ if(isset($_SESSION["loginStatus"]["status"])&&$_SESSION["loginStatus"]["status"]
                             <div class="panel-heading">
                                 <h3 class="panel-title">班级人数</h3>
                             </div>
-                            <div class="panel-body">
+                            <div class="panel-body" id="student_num">
                                 <?php echo $_SESSION["loginStatus"]["student_num"]?>
                             </div>
                         </div>
@@ -137,7 +139,8 @@ if(isset($_SESSION["loginStatus"]["status"])&&$_SESSION["loginStatus"]["status"]
                     <div class="col-md-6 text-right">
                         <div class="btn-group">
                             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#addStudent">添加学生</button>
-                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#">导入学生名单</button>
+                            <button type="button" class="btn btn-default disabled" data-toggle="modal" data-target="#">导入学生名单</button>
+                            <button type="button" class="btn btn-default" id="printStudentList">打印记次张贴名单</button>
                             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#deleteStudent">删除学生</button>
                         </div>
                     </div>
@@ -198,7 +201,7 @@ if(isset($_SESSION["loginStatus"]["status"])&&$_SESSION["loginStatus"]["status"]
                     <?php
                     $tempID=$offsetNum+1;
                     while($studentRow=$stmt->fetch()){
-                        echo "<tr><td>".$tempID."</td><td>".$studentRow["student_id"]."</td><td>".$studentRow["student_name"]."</td></tr>";
+                        echo "<tr><td id='student_count_$tempID'>".$tempID."</td><td id='student_id_$tempID'>".$studentRow["student_id"]."</td><td id='student_name_$tempID'>".$studentRow["student_name"]."</td></tr>";
                         $tempID++;
                     }
 
