@@ -78,14 +78,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.addDrinkRecord.php">
+  <component name="RunManager" selected="JavaScript Debug.signin.php">
     <configuration name="PDOconnection2.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost/drinking manage system/PDOconnection2.php">
       <method v="2" />
     </configuration>
     <configuration name="addDrinkRecord.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost/drinking manage system/addDrinkRecord.php">
-      <method v="2" />
-    </configuration>
-    <configuration name="deleteStudent.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost/drinking manage system/deleteStudent.php">
       <method v="2" />
     </configuration>
     <configuration name="index.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost/drinking manage system/index.php">
@@ -94,13 +91,16 @@
     <configuration name="login.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost/drinking manage system/login.php">
       <method v="2" />
     </configuration>
+    <configuration name="signin.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost/drinking manage system/signin.php">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.addDrinkRecord.php" />
+        <item itemvalue="JavaScript Debug.signin.php" />
         <item itemvalue="JavaScript Debug.login.php" />
+        <item itemvalue="JavaScript Debug.addDrinkRecord.php" />
         <item itemvalue="JavaScript Debug.index.php" />
         <item itemvalue="JavaScript Debug.PDOconnection2.php" />
-        <item itemvalue="JavaScript Debug.deleteStudent.php" />
       </list>
     </recent_temporary>
   </component>
@@ -131,7 +131,7 @@
       <workItem from="1589434514939" duration="15207000" />
       <workItem from="1589531726898" duration="22288000" />
       <workItem from="1589643571250" duration="1948000" />
-      <workItem from="1589981459638" duration="2155000" />
+      <workItem from="1589981459638" duration="7113000" />
     </task>
     <servers />
   </component>

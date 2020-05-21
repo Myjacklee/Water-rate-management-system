@@ -31,9 +31,10 @@ try {
         $note="账号已被占用！";
         $page="注册界面";
         $imgRes="attention.png";
-        $protocol = (int)$_SERVER['SERVER_PORT'] == 80 ? 'http' : 'https';
-        $url=$protocol."://".$_SERVER["HTTP_HOST"]."/signin.php";
-        Header("refresh:5;url=".$protocol."://".$_SERVER["HTTP_HOST"]."/signin.php");
+//        $protocol = (int)$_SERVER['SERVER_PORT'] == 80 ? 'http' : 'https';
+//        $url=$protocol."://".$_SERVER["HTTP_HOST"]."/signin.php";
+        $url="signin.php";
+        Header("refresh:5;url=".$url);
     }else if($codeResult==1){
         $stmtB = $conn->prepare("insert into admin(email,password,admin_name,school,grade,class,Sign_date) values(:email,:password,:admin_name,:school,:grade,:class,:sign_date)");
         $stmtB->bindParam(":email", $email);
@@ -66,24 +67,27 @@ try {
             $note="注册成功！";
             $imgRes="success.png";
             $page="登录界面";
-            $protocol = (int)$_SERVER['SERVER_PORT'] == 80 ? 'http' : 'https';
-            $url=$protocol."://".$_SERVER["HTTP_HOST"]."/index.php";
-            Header("refresh:5;url=".$protocol."://".$_SERVER["HTTP_HOST"]."/index.php");
+//            $protocol = (int)$_SERVER['SERVER_PORT'] == 80 ? 'http' : 'https';
+//            $url=$protocol."://".$_SERVER["HTTP_HOST"]."/index.php";
+            $url="index.php";
+            Header("refresh:5;url=".$url);
         }else{
             $note="注册失败！";
             $page="注册界面";
             $imgRes="attention.png";
-            $protocol = (int)$_SERVER['SERVER_PORT'] == 80 ? 'http' : 'https';
-            $url=$protocol."://".$_SERVER["HTTP_HOST"]."/signin.php";
-            Header("refresh:5;url=".$protocol."://".$_SERVER["HTTP_HOST"]."/signin.php");
+//            $protocol = (int)$_SERVER['SERVER_PORT'] == 80 ? 'http' : 'https';
+//            $url=$protocol."://".$_SERVER["HTTP_HOST"]."/signin.php";
+            $url="signin.php";
+            Header("refresh:5;url=".$url);
         }
     }else{
         $note="注册失败,邀请码无效或邀请码已被使用!";
         $page="注册界面";
         $imgRes="attention.png";
-        $protocol = (int)$_SERVER['SERVER_PORT'] == 80 ? 'http' : 'https';
-        $url=$protocol."://".$_SERVER["HTTP_HOST"]."/signin.php";
-        Header("refresh:5;url=".$protocol."://".$_SERVER["HTTP_HOST"]."/signin.php");
+//        $protocol = (int)$_SERVER['SERVER_PORT'] == 80 ? 'http' : 'https';
+//        $url=$protocol."://".$_SERVER["HTTP_HOST"]."/signin.php";
+        $url="signin.php";
+        Header("refresh:5;url=".$url);
     }
     $conn=null;
 
@@ -91,9 +95,10 @@ try {
     $note="注册失败！";
     $page="注册界面";
     $imgRes="attention.png";
-    $protocol = (int)$_SERVER['SERVER_PORT'] == 80 ? 'http' : 'https';
-    $url=$protocol."://".$_SERVER["HTTP_HOST"]."/signin.php";
-    Header("refresh:5;url=".$protocol."://".$_SERVER["HTTP_HOST"]."/signin.php");
+//    $protocol = (int)$_SERVER['SERVER_PORT'] == 80 ? 'http' : 'https';
+//    $url=$protocol."://".$_SERVER["HTTP_HOST"]."/signin.php";
+    $url="signin.php";
+    Header("refresh:5;url=".$url);
     $e->getMessage();
 }
 

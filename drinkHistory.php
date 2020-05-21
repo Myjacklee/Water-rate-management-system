@@ -230,8 +230,8 @@ if(isset($_SESSION["loginStatus"]["status"])&&$_SESSION["loginStatus"]["status"]
     $page = "登录界面";
     $imgRes="attention.png";
     $url="login.php";
-    $protocol = (int)$_SERVER['SERVER_PORT'] == 80 ? 'http' : 'https';
-    Header("refresh:5;url=".$protocol."://".$_SERVER["HTTP_HOST"]."/login.php");
+    //$protocol = (int)$_SERVER['SERVER_PORT'] == 80 ? 'http' : 'https';
+    Header("refresh:5;url=".$url);
     ?>
     <body>
     <div class="container">
