@@ -6,5 +6,5 @@
 
 ## 官网
 
-[饮水管理系统](http://www.zonggen.xyz)，若需注册使用，请联系管理员lee2251222797@gmail.com
+[饮水管理系统](http://www.zonggen.xyz)，若需注册使用，请联系管理员邮箱：lee2251222797@gmail.com，WeChat：lzg2251222797
 
