@@ -1,8 +1,11 @@
 <?php
 session_start();
 if(isset($_SESSION["loginStatus"]["status"])&&$_SESSION["loginStatus"]["status"]===true){
+    $_SESSION=array();
+    if(isset($_COOKIE[session_name()])){
+        setcookie(session_name(),'',time()-42000,'/');
+    }
     session_destroy();
-    setcookie(session_name(),'',time()-3600);
     echo true;
 }else{
     echo false;
