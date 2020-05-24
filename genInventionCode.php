@@ -18,5 +18,22 @@ function make_coupon_card() {
     );
     return $d;
 }
-echo make_coupon_card();
+session_start();
+if(isset($_SESSION["admin"])&&$_SESSION["admin"]==true){
+    try{
+        require 'PDOconnection.php';
+        $conn=connection();
+        $code=make_coupon_card();
+        $stmt=$conn->prepare("insert into invention_code(code) values(:code)");
+        $stmt->bindParam(":code",$code);
+        $stmt->execute();
+        echo "success";
+    }
+    catch (PDOException $e){
+        echo "fail";
+    }
+}else{
+    Header("refresh:0;url=superAdminLogin.php");
+}
+
 ?>
