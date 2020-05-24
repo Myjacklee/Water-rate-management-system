@@ -78,7 +78,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.superAdmin.php">
+  <component name="RunManager" selected="JavaScript Debug.index.php">
     <configuration name="addDrinkRecord.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost/drinking manage system/addDrinkRecord.php">
       <method v="2" />
     </configuration>
@@ -99,9 +99,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.php" />
         <item itemvalue="JavaScript Debug.superAdmin.php" />
         <item itemvalue="JavaScript Debug.superAdminLogin.php" />
-        <item itemvalue="JavaScript Debug.index.php" />
         <item itemvalue="JavaScript Debug.signin.php" />
         <item itemvalue="JavaScript Debug.login.php" />
       </list>
@@ -136,7 +136,7 @@
       <workItem from="1589643571250" duration="1948000" />
       <workItem from="1589981459638" duration="22598000" />
       <workItem from="1590247131538" duration="1869000" />
-      <workItem from="1590299440038" duration="13311000" />
+      <workItem from="1590299440038" duration="18585000" />
     </task>
     <servers />
   </component>

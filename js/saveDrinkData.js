@@ -6,7 +6,6 @@ $(document).ready(function(){
         var price=$("#drinkingUnitPrice").text();
         var url="saveDrinkData.php?";
         for(var i=1;i<=studentNum;i++ ){
-
             url=url+"student_ID_"+String(i)+"="+$("#student_ID_"+String(i)).text()+"&student_"+String(i)+"_count="+$("#student_"+String(i)+"_count").val()+
                 "&student_"+String(i)+"_price="+$("#student_"+String(i)+"_price").text()+"&";
         }
