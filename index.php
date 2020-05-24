@@ -36,6 +36,9 @@ if(isset($_SESSION["loginStatus"]["status"])&&$_SESSION["loginStatus"]["status"]
     $row=$stmt->fetch();
     $allStudentColumns=intval($row["count(student_id)"]);
     $showColumns=$allStudentColumns;
+    if($showColumns==0){
+        $showColumns=1;
+    }
     $allPageNum=ceil($allStudentColumns/$showColumns);
     if($page>$allPageNum){
         $page=$allPageNum;

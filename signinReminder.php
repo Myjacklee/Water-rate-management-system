@@ -61,8 +61,9 @@ try {
                 "student_num"=>$result["Student_num"],
                 "loginTime"=>time()
             );
-            $stmt=$conn->prepare("update invention_code set used=1 where code=:code");
+            $stmt=$conn->prepare("update invention_code set used=1,uid=:uid where code=:code");
             $stmt->bindParam(":code",$inventionCode);
+            $stmt->bindParam(":uid",$_SESSION["loginStatus"]["uid"]);
             $stmt->execute();
             $note="注册成功！";
             $imgRes="success.png";

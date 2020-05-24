@@ -46,7 +46,7 @@ if(isset($_SESSION["loginStatus"]["status"])&&$_SESSION["loginStatus"]["status"]
     if($page<1){
         $page=1;
     }
-    $stmt=$conn->prepare("select a.student_id,b.student_name,a.drink_count,a.cost,a.up_date from student_drink a inner join student b  on a.student_id=b.student_id where a.uid=:uid order by up_date DESC,student_id ASC limit :limitNum offset :offsetNum");
+    $stmt=$conn->prepare("select a.student_id,b.student_name,a.drink_count,a.cost,a.up_date from (select * from student_drink where uid=:uid) a inner join (select * from student where uid=:uid) b  on a.student_id=b.student_id order by up_date DESC,student_id ASC limit :limitNum offset :offsetNum");
     $offsetNum=($page-1)*$showColumns;
     $stmt->bindValue(":limitNum",$showColumns,PDO::PARAM_INT);
     $stmt->bindValue(":offsetNum",$offsetNum,PDO::PARAM_INT);
