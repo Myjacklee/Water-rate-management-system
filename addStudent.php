@@ -7,16 +7,18 @@ if(isset($_SESSION["loginStatus"]["status"])&&$_SESSION["loginStatus"]["status"]
         $_POST[$key]=trim($value);
     }
     try{
-
         $conn=connection();
+        $conn->beginTransaction();
         $stmt=$conn->prepare("insert into student(Uid,student_id,student_name) values(:Uid,:student_id,:student_name)");
         $stmt->bindParam(":Uid",$_SESSION["loginStatus"]["uid"]);
         $stmt->bindValue(":student_id",intval($_POST["ID"]),PDO::PARAM_INT);
         $stmt->bindParam(":student_name",$_POST["name"]);
         $stmt->execute();
+        $conn->commit();
         echo "success";
     }
     catch (PDOException $e){
+        $conn->rollBack();
         echo "fail";
     }
 }else{

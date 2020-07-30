@@ -3,11 +3,12 @@ header("content-type:text/html;charset=uft-8");
 session_start();
 if(isset($_SESSION["loginStatus"]["status"])&&$_SESSION["loginStatus"]["status"]==true){
     require 'PDOconnection.php';
-    foreach ($_POST as $key=>$value){
-        $_POST[$key]=trim($value);
+    foreach ($_GET as $key=>$value){
+        $_GET[$key]=trim($value);
     }
     try{
         $conn=connection();
+        $conn->beginTransaction();
         $stmt=$conn->prepare("insert into student_drink(uid,student_id,drink_count,cost,up_date) values(:uid,:student_id,:drink_count,:cost,:up_date)");
         for($i =1;$i<=$_SESSION["loginStatus"]["student_num"];$i++){
             $temp1=intval($_SESSION["loginStatus"]["uid"]);
@@ -33,9 +34,11 @@ if(isset($_SESSION["loginStatus"]["status"])&&$_SESSION["loginStatus"]["status"]
         $temp9=strval(date("Y-m-d"));
         $stmt->bindParam(":up_date",$temp9);
         $stmt->execute();
+        $conn->commit();
         echo 'success';
     }
     catch (PDOException $e){
+        $conn->rollBack();
         echo "fail";
     }
 

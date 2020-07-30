@@ -19,6 +19,7 @@ setcookie(session_name(),'',time()-3600); //销毁与客户端的卡号
 session_start();
 try {
     $conn = connection();
+    $conn->beginTransaction();
     $stmt=$conn->prepare("select * from admin where email=:email");
     $stmt->bindParam(":email",$email);
     $stmt->execute();
@@ -31,8 +32,6 @@ try {
         $note="账号已被占用！";
         $page="注册界面";
         $imgRes="attention.png";
-//        $protocol = (int)$_SERVER['SERVER_PORT'] == 80 ? 'http' : 'https';
-//        $url=$protocol."://".$_SERVER["HTTP_HOST"]."/signin.php";
         $url="signin.php";
         Header("refresh:5;url=".$url);
     }else if($codeResult==1){
@@ -84,7 +83,7 @@ try {
         $url="signin.php";
         Header("refresh:5;url=".$url);
     }
-    $conn=null;
+    $conn->commit();
 
 }catch(PDOException $e){
     $note="注册失败！";
@@ -92,7 +91,7 @@ try {
     $imgRes="attention.png";
     $url="signin.php";
     Header("refresh:5;url=".$url);
-    $e->getMessage();
+    $conn->rollBack();
 }
 
 ?>

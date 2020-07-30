@@ -17,10 +17,12 @@ if(isset($_SESSION["loginStatus"]["status"])&&$_SESSION["loginStatus"]["status"]
         $row=$stmt->fetch();
         $resultNum=intval($row["count(student_id)"]);
         if($resultNum==1){
+            $conn->beginTransaction();
             $stmt=$conn->prepare("delete from student where Uid=:Uid and student_id=:student_id");
             $stmt->bindParam(":Uid",$_SESSION["loginStatus"]["uid"]);
             $stmt->bindParam(":student_id",$student_id);
             $stmt->execute();
+            $conn->commit();
             echo "success";
         }else{
             echo "do not exist";
@@ -28,6 +30,7 @@ if(isset($_SESSION["loginStatus"]["status"])&&$_SESSION["loginStatus"]["status"]
 
     }
     catch (PDOException $e){
+        $conn->rollBack();
         echo "fail";
     }
 }else{

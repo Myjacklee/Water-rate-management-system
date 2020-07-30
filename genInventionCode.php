@@ -23,13 +23,16 @@ if(isset($_SESSION["admin"])&&$_SESSION["admin"]==true){
     try{
         require 'PDOconnection.php';
         $conn=connection();
+        $conn->beginTransaction();
         $code=make_coupon_card();
         $stmt=$conn->prepare("insert into invention_code(code) values(:code)");
         $stmt->bindParam(":code",$code);
         $stmt->execute();
+        $conn->commit();
         echo "success";
     }
     catch (PDOException $e){
+        $conn->rollBack();
         echo "fail";
     }
 }else{
