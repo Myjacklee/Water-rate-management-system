@@ -41,7 +41,7 @@ header("content-type:text/html;charset=utf-8");
 if(isset($_SESSION["admin"])&&$_SESSION["admin"]==true){
     try {
         require 'PDOconnection.php';
-        $page = isset($_GET["page"]) ? intval(htmlspecialchars($_GET["page"])) : 1;
+        $page = isset($_GET["page"]) ? intval(htmlspecialchars($_GET["page"]),ENT_QUOTES) : 1;
         $showColumns = 20;
         $paginationFrontNumMax = 2;  //分页标签向前最大输出页数
         $paginationFollowNumMax = 2; //分页标签向后最大输出页数
@@ -221,7 +221,6 @@ if(isset($_SESSION["admin"])&&$_SESSION["admin"]==true){
     $page = "超级用户登录界面";
     $imgRes="attention.png";
     $url="superAdminLoginReminder.php";
-    //$protocol = (int)$_SERVER['SERVER_PORT'] == 80 ? 'http' : 'https';
     Header("refresh:5;url=".$url);
     ?>
     <body>

@@ -6,8 +6,8 @@ header("content-type:text/html;charset=utf-8");
 foreach ($_POST as $key => $value) {
     $_POST[$key] = trim($value);
 }
-$account_id= isset($_POST['inputAccount']) ? htmlspecialchars($_POST['inputAccount']) : '';
-$password = isset($_POST['inputPassword']) ? htmlspecialchars($_POST['inputPassword']) : '';
+$account_id= isset($_POST['inputAccount']) ? htmlspecialchars($_POST['inputAccount'],ENT_QUOTES) : '';
+$password = isset($_POST['inputPassword']) ? htmlspecialchars($_POST['inputPassword'],ENT_QUOTES) : '';
 session_start();
 try {
     $conn = connection();

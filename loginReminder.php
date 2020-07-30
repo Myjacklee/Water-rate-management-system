@@ -5,8 +5,8 @@ header("content-type:text/html;charset=utf-8");
 foreach ($_POST as $key => $value) {
     $_POST[$key] = trim($value);
 }
-$email = isset($_POST['inputEmail']) ? htmlspecialchars($_POST['inputEmail']) : '';
-$password = isset($_POST['inputPassword']) ? htmlspecialchars($_POST['inputPassword']) : '';
+$email = isset($_POST['inputEmail']) ? htmlspecialchars($_POST['inputEmail'],ENT_QUOTES) : '';
+$password = isset($_POST['inputPassword']) ? htmlspecialchars($_POST['inputPassword'],ENT_QUOTES) : '';
 //session_unset();
 //setcookie(session_name(), '', time() - 3600); //销毁与客户端的卡号
 session_start();

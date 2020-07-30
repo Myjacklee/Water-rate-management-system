@@ -27,7 +27,7 @@ header("content-type:text/html;charset=utf-8");
 if(isset($_SESSION["loginStatus"]["status"])&&$_SESSION["loginStatus"]["status"]==true){
     try {
         require 'PDOconnection.php';
-        $page = isset($_GET["page"]) ? intval(htmlspecialchars($_GET["page"])) : 1;
+        $page = isset($_GET["page"]) ? intval(htmlspecialchars($_GET["page"]),ENT_QUOTES) : 1;
         $showColumns = 10;
         $paginationFrontNumMax = 2;  //分页标签向前最大输出页数
         $paginationFollowNumMax = 2; //分页标签向后最大输出页数

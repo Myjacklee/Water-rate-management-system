@@ -5,14 +5,14 @@ header("content-type:text/html;charset=utf-8");
 foreach($_POST as $key=>$value){
     $_POST[$key]=trim($value);
 }
-$email=isset($_POST['inputEmail'])?htmlspecialchars($_POST['inputEmail']):'';
-$name=isset($_POST['inputName'])?htmlspecialchars($_POST['inputName']):'';
-$school=isset($_POST['inputSchool'])?htmlspecialchars($_POST['inputSchool']):'';
-$grade=isset($_POST['inputGrade'])?htmlspecialchars($_POST['inputGrade']):'';
-$class=isset($_POST['inputClass'])?htmlspecialchars($_POST['inputClass']):'';
-$password=isset($_POST['inputPassword'])?htmlspecialchars($_POST['inputPassword']):'';
-$confirmPassword=isset($_POST['confirmPassword'])?htmlspecialchars($_POST['confirmPassword']):'';
-$inventionCode=isset($_POST['inventionCode'])?htmlspecialchars($_POST['inventionCode']):'';
+$email=isset($_POST['inputEmail'])?htmlspecialchars($_POST['inputEmail'],ENT_QUOTES):'';
+$name=isset($_POST['inputName'])?htmlspecialchars($_POST['inputName'],ENT_QUOTES):'';
+$school=isset($_POST['inputSchool'])?htmlspecialchars($_POST['inputSchool'],ENT_QUOTES):'';
+$grade=isset($_POST['inputGrade'])?htmlspecialchars($_POST['inputGrade'],ENT_QUOTES):'';
+$class=isset($_POST['inputClass'])?htmlspecialchars($_POST['inputClass'],ENT_QUOTES):'';
+$password=isset($_POST['inputPassword'])?htmlspecialchars($_POST['inputPassword'],ENT_QUOTES):'';
+$confirmPassword=isset($_POST['confirmPassword'])?htmlspecialchars($_POST['confirmPassword'],ENT_QUOTES):'';
+$inventionCode=isset($_POST['inventionCode'])?htmlspecialchars($_POST['inventionCode'],ENT_QUOTES):'';
 $today=date("Y-m-d");
 session_unset();
 setcookie(session_name(),'',time()-3600); //销毁与客户端的卡号
