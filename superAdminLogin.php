@@ -12,8 +12,6 @@
 <script src="./bootstrap-3.3.7-dist/js/jquery-3.4.0.min.js"></script>
     <!-- 包括所有已编译的插件 -->
 <script src="./bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-
-
 </head>
 <body>
 	<div class="container">

@@ -4,7 +4,7 @@ function connection(){
     $username="root";
     $password="";
     $DBName="systemDB";
-    $conn=new PDO("mysql:host=$servername;dbname=$DBName",$username,$password);
+    $conn=new PDO("mysql:host=$servername;dbname=$DBName",$username,$password,array(PDO::ATTR_PERSISTENT=>true));
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     return $conn;
 }

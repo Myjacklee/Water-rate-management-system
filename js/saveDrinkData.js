@@ -12,7 +12,6 @@ $(document).ready(function(){
         url+="totalCost="+totalCost+"&";
         url+="totalDrinkNum="+totalDrinkNum+"&";
         url+="price="+price;
-   //     url=url.substr(0,url.length-1);
         $.get(url,function(response,status){
             if(response=="success"){
                 alert("数据保存成功！");

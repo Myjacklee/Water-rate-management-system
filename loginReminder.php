@@ -1,5 +1,4 @@
 <?php
-
 require 'PDOconnection.php';
 header("content-type:text/html;charset=utf-8");
 //清除输入中的空白符
@@ -35,17 +34,12 @@ try {
         $note = "登录成功！";
         $page = "主界面";
         $imgRes="success.png";
-//        $protocol = (int)$_SERVER['SERVER_PORT'] == 80 ? 'http' : 'https';
-//        $url=$protocol."://".$_SERVER["HTTP_HOST"]."/index.php";
         $url="index.php";
-
         Header("refresh:5;url=".$url);
     } else {
         $note = "账号或密码错误";
         $page = "登录界面";
         $imgRes="attention.png";
-//        $protocol = (int)$_SERVER['SERVER_PORT'] == 80 ? 'http' : 'https';
-//        $url=$protocol."://".$_SERVER["HTTP_HOST"]."/login.php";
         $url="login.php";
         Header("refresh:5;url=".$url);
     }
@@ -55,8 +49,6 @@ try {
     $note = "出现未知错误，请联系管理员";
     $page = "登录界面";
     $imgRes="attention.png";
-//    $protocol = (int)$_SERVER['SERVER_PORT'] == 80 ? 'http' : 'https';
-//    $url=$protocol."://".$_SERVER["HTTP_HOST"]."/login.php";
     $url="login.php";
     Header("refresh:5;url=".$url);
 }
