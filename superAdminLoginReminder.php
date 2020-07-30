@@ -1,5 +1,4 @@
 <?php
-
 require 'PDOconnection.php';
 header("content-type:text/html;charset=utf-8");
 //清除输入中的空白符

@@ -88,6 +88,7 @@ if(isset($_SESSION["loginStatus"]["status"])&&$_SESSION["loginStatus"]["status"]
                         <li><a href="index.php">学生信息界面</a></li>
                         <li class="active"><a href="addDrinkRecord.php">水费录入界面</a></li>
                         <li><a href="drinkHistory.php">历史查询界面</a></li>
+                        <li><a href="classDrinkHistory.php">班级历史记录</a></li>
                     </ul>
 
                 </div>

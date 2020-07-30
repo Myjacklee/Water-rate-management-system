@@ -8,7 +8,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
     <execution>
       <executable />
     </execution>
@@ -52,13 +52,18 @@
       <server host="localhost" id="eb7f4532-26c6-41f9-85cd-5c5b301200cb" name="localhost" />
     </servers>
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
+    <include_path>
+      <path value="$PROJECT_DIR$/../../php" />
+    </include_path>
+  </component>
   <component name="ProjectId" id="1alVq4p5iQ6LOsSVDXzUu44zxlm" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../php" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -78,17 +83,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.php">
-    <configuration name="beianCode.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63360/drinking manage system/beianCode.php" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="PHP Script.index.php">
+    <configuration name="addDrinkRecord.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63360/drinking manage system/addDrinkRecord.php" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="index.php (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63360/drinking manage system/index.php" useBuiltInWebServerPort="true">
+    <configuration name="classDrinkHistory.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63360/drinking manage system/classDrinkHistory.php" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="index.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost/drinking manage system/index.php">
+    <configuration name="signin.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63360/drinking manage system/signin.php" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="superAdmin.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost/drinking manage system/superAdmin.php">
+    <configuration name="addDrinkRecord.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/addDrinkRecord.php">
       <method v="2" />
     </configuration>
     <configuration name="index.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/index.php">
@@ -96,11 +101,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.index.php" />
-        <item itemvalue="JavaScript Debug.index.php (1)" />
         <item itemvalue="PHP Script.index.php" />
-        <item itemvalue="JavaScript Debug.superAdmin.php" />
-        <item itemvalue="JavaScript Debug.beianCode.php" />
+        <item itemvalue="PHP Script.addDrinkRecord.php" />
+        <item itemvalue="JavaScript Debug.addDrinkRecord.php" />
+        <item itemvalue="JavaScript Debug.classDrinkHistory.php" />
+        <item itemvalue="JavaScript Debug.signin.php" />
       </list>
     </recent_temporary>
   </component>
@@ -135,7 +140,8 @@
       <workItem from="1590247131538" duration="1869000" />
       <workItem from="1590299440038" duration="19288000" />
       <workItem from="1590489759581" duration="2709000" />
-      <workItem from="1596038628028" duration="10777000" />
+      <workItem from="1596038628028" duration="13599000" />
+      <workItem from="1596090621182" duration="2577000" />
     </task>
     <servers />
   </component>

@@ -22,7 +22,6 @@ session_start();
 header("content-type:text/html;charset=utf-8");
 if(isset($_SESSION["loginStatus"]["status"])&&$_SESSION["loginStatus"]["status"]==true){
     try {
-
         require 'PDOconnection.php';
         $page = isset($_GET["page"]) ? intval(htmlspecialchars($_GET["page"]),ENT_QUOTES) : 1;
         $showColumns = 20;  //每页展示数据条数
@@ -35,7 +34,7 @@ if(isset($_SESSION["loginStatus"]["status"])&&$_SESSION["loginStatus"]["status"]
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $row = $stmt->fetch();
         $allStudentColumns = intval($row["count(student_id)"]);
-        $stmt = $conn->prepare("select count(did) from student_drink where Uid=:Uid");
+        $stmt = $conn->prepare("select count(did) from class_drink where Uid=:Uid");
         $stmt->bindParam(":Uid", $_SESSION["loginStatus"]["uid"]);
         $stmt->execute();
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
@@ -48,14 +47,13 @@ if(isset($_SESSION["loginStatus"]["status"])&&$_SESSION["loginStatus"]["status"]
         if ($page < 1) {
             $page = 1;
         }
-        $stmt = $conn->prepare("select a.student_id,b.student_name,a.drink_count,a.cost,a.up_date from (select * from student_drink where uid=:uid) a inner join (select * from student where uid=:uid) b  on a.student_id=b.student_id order by up_date DESC,student_id ASC limit :limitNum offset :offsetNum");
+        $stmt = $conn->prepare("select cost,drink_count,price,up_date from class_drink where uid=:uid order by up_date DESC limit :limitNum offset :offsetNum");
         $offsetNum = ($page - 1) * $showColumns;
         $stmt->bindValue(":limitNum", $showColumns, PDO::PARAM_INT);
         $stmt->bindValue(":offsetNum", $offsetNum, PDO::PARAM_INT);
         $stmt->bindParam(":uid", $_SESSION["loginStatus"]["uid"]);
         $stmt->execute();
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
-
         ?>
         <body>
         <nav class="navbar navbar-default navbar--fixed-top">
@@ -84,8 +82,8 @@ if(isset($_SESSION["loginStatus"]["status"])&&$_SESSION["loginStatus"]["status"]
                     <ul class="nav nav-sidebar">
                         <li><a href="index.php">学生信息界面</a></li>
                         <li><a href="addDrinkRecord.php">水费录入界面</a></li>
-                        <li class="active"><a href="drinkHistory.php">历史查询界面</a></li>
-                        <li><a href="classDrinkHistory.php">班级历史记录</a></li>
+                        <li><a href="drinkHistory.php">历史查询界面</a></li>
+                        <li class="active"><a href="classDrinkHistory.php">班级历史记录</a></li>
                     </ul>
                 </div>
                 <div class="col-md-10 content">
@@ -174,18 +172,17 @@ if(isset($_SESSION["loginStatus"]["status"])&&$_SESSION["loginStatus"]["status"]
                         <thead>
                         <tr>
                             <th>编号</th>
-                            <th>学号</th>
-                            <th>姓名</th>
-                            <th>次数</th>
-                            <th>费用</th>
                             <th>日期</th>
+                            <th>总次数</th>
+                            <th>总费用</th>
+                            <th>单价</th>
                         </tr>
                         </thead>
                         <tbody>
                         <?php
                         $tempID = $offsetNum + 1;
                         while ($studentRow = $stmt->fetch()) {
-                            echo "<tr><td>" . $tempID . "</td><td id='student_ID_" . $tempID . "'>" . $studentRow["student_id"] . "</td><td>" . $studentRow["student_name"] . "</td><td>" . $studentRow["drink_count"] . "</td><td>" . $studentRow["cost"] . "</td><td>" . $studentRow["up_date"] . "</td></tr>";
+                            echo "<tr><td>" . $tempID . "</td><td id='ID_" . $tempID . "'>" . $studentRow["up_date"] . "</td><td>" . $studentRow["drink_count"] . "</td><td>" . $studentRow["cost"] . "</td><td>" . $studentRow["price"] . "</td></tr>";
                             $tempID++;
                         }
 
@@ -241,7 +238,6 @@ if(isset($_SESSION["loginStatus"]["status"])&&$_SESSION["loginStatus"]["status"]
     $page = "登录界面";
     $imgRes="attention.png";
     $url="login.php";
-    //$protocol = (int)$_SERVER['SERVER_PORT'] == 80 ? 'http' : 'https';
     Header("refresh:5;url=".$url);
     ?>
     <body>
@@ -262,9 +258,7 @@ if(isset($_SESSION["loginStatus"]["status"])&&$_SESSION["loginStatus"]["status"]
         ?>
     </div>
     </body>
-<?php
+    <?php
 }
 ?>
-
-
 </html>
