@@ -11,7 +11,9 @@ $school=isset($_POST['inputSchool'])?htmlspecialchars($_POST['inputSchool'],ENT_
 $grade=isset($_POST['inputGrade'])?htmlspecialchars($_POST['inputGrade'],ENT_QUOTES):'';
 $class=isset($_POST['inputClass'])?htmlspecialchars($_POST['inputClass'],ENT_QUOTES):'';
 $password=isset($_POST['inputPassword'])?htmlspecialchars($_POST['inputPassword'],ENT_QUOTES):'';
+$password=md5($password);
 $confirmPassword=isset($_POST['confirmPassword'])?htmlspecialchars($_POST['confirmPassword'],ENT_QUOTES):'';
+$confirmPassword=md5($confirmPassword);
 $inventionCode=isset($_POST['inventionCode'])?htmlspecialchars($_POST['inventionCode'],ENT_QUOTES):'';
 $today=date("Y-m-d");
 session_unset();

@@ -7,6 +7,7 @@ foreach ($_POST as $key => $value) {
 }
 $email = isset($_POST['inputEmail']) ? htmlspecialchars($_POST['inputEmail'],ENT_QUOTES) : '';
 $password = isset($_POST['inputPassword']) ? htmlspecialchars($_POST['inputPassword'],ENT_QUOTES) : '';
+$password = md5($password);
 //session_unset();
 //setcookie(session_name(), '', time() - 3600); //销毁与客户端的卡号
 session_start();
